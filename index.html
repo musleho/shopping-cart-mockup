@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Till You DROP TABLE</title>
+    <link rel="stylesheet" href="_css/index.css">
+    <script src="_script/index.js"></script>
+</head>
+
+<body>
+    <div id="mainGrid">
+        <div id="header">
+            <h1><span id="tennis">Tennis</span><span id="genius">Genius</span></h1>
+            <h5>By Omar Musleh</h2>
+        </div>
+        <div id="subheader">
+            <h1>Your Shopping Cart</h1>
+            <input type="button" class="remove" id="reset" value="Reset">
+        </div>
+        <form method="post" onsubmit="return false;">
+            <div class="item" id="item1">
+                <img src="_images/BabolatAero.jpg" alt="2019 Babolat Aero Pro">
+                <div class="itemDetails">
+                    <h2>2019 Babolat Aero Pro</h2>
+                    <p class="priceTag" id="price1">$199.99</p>
+                    <div class="quantRow">
+                        <label for="quant1">Qty:&nbsp;</label>
+                        <input type="number" id="quant1" name="quant1" min="0" max="5" value="1">&nbsp;
+                    </div>
+                </div>
+                <div class="subtotalDiv">
+                    <span class="subLabel">Subtotal:&nbsp;$<span class="subtotals" id="subtotal1"></span></span>
+                    <label for="remove1"><input type=button id="remove1" class="remove" name="remove1"
+                            value="Remove Item"></label>
+                </div>
+            </div>
+
+            <div class="item" id="item2">
+                <img src="_images/WilsonBlade.jpg" alt="2019 Wilson Blade 98">
+                <div class="itemDetails">
+                    <h2>2019 Wilson Blade 98</h2>
+                    <p class="priceTag" id="price2">$159.99</p>
+                    <div class="quantRow">
+                        <label for="quant2">Qty:&nbsp;</label>
+                        <input type="number" id="quant2" name="quant2" min="0" max="5" value="1">&nbsp;
+                    </div>
+                </div>
+                <div class="subtotalDiv">
+                    <span class="subLabel">Subtotal:&nbsp;$<span class="subtotals" id="subtotal2"></span></span>
+                    <label for="remove2"><input type=button id="remove2" class="remove" name="remove2"
+                            value="Remove Item"></label>
+                </div>
+            </div>
+            <div id="fillOuts">
+                <div id="shipping">
+                    <h3>Choose your Shipping</h3>
+                    <label for="shipping"><input type="radio" id="standard" name="shipping" value="4.99">&nbsp;Standard
+                        Shipping - $4.99</label><br><br>
+                    <label for="shipping"><input type="radio" id="express" name="shipping" value="19.99">&nbsp;Expedited
+                        Shipping - $19.99</label>
+                </div>
+                <div id="addOns">
+                    <h3>Choose your Add-ons</h3>
+                    <label for="giftWrapping"><input type="checkbox" id="giftWrapping" name="giftWrapping"
+                            value="9.99">&nbsp;Gift Wrapping ($9.99)</label><br><br>
+                    <label for="insurance"><input type="checkbox" id="insurance" name="insurance"
+                            value="1.1">&nbsp;Product Insurance (10% of subtotal)</label><br><br>
+                    <label for="membership"><input type="checkbox" id="membership" name="membership"
+                            value="Membership">&nbsp;Join tGenius (FREE)</label>
+                </div>
+                <div id="couponCodes">
+                    <h3>Enter a Coupon Code:</h3>
+                    <label for="coupon"><input type="text" id="coupon" name="coupon" placeholder="Enter your coupon code here."></label>
+                    <input type="button" id="applyCoupon" name="applyCoupon" value="Apply">
+                    <p id="couponMessage"></p>
+                    <p id="notValid"></p>
+                </div>
+                <div id="checkout">
+                    <p>Subtotal: $<span id="fullSubtotal"></span></p>
+                    <p>Shipping: $<span id="shippingCost">0.00</span></p>
+                    <p>Add-Ons: $<span id="addonCost">0.00</span></p>
+                    <span id="couponDiscount"></span>
+                    <p>Taxes: $<span id="tax"></span></p>
+                    <h3>Total: $<span id="total"></span></h3>
+                    <input type="button" id="confirm" name="confirm" value="Confirm & Pay">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
